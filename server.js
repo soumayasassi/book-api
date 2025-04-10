@@ -18,5 +18,12 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/api/books', bookRoutes);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+mongoose.set("strictQuery", false);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family: 4 // 👈 force l'utilisation d'IPv4
+})
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
