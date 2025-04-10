@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://ton-api.com/api",
+      "url": "https://book-api-j51z.onrender.com",
       "description": "Production server"
     }
   ],
