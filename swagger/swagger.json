@@ -114,20 +114,16 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            //"example": "605c5c5e95d5b424e8f7e543"
+            "type": "string"
           },
           "title": {
-            "type": "string",
-           // "example": "The Great Gatsby"
+            "type": "string"
           },
           "author": {
-            "type": "string",
-            //"example": "F. Scott Fitzgerald"
+            "type": "string"
           },
           "year": {
-            "type": "integer",
-           // "example": 1925
+            "type": "integer"
           }
         }
       }
