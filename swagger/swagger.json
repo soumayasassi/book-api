@@ -115,19 +115,19 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": "605c5c5e95d5b424e8f7e543"
+            //"example": "605c5c5e95d5b424e8f7e543"
           },
           "title": {
             "type": "string",
-            "example": "The Great Gatsby"
+           // "example": "The Great Gatsby"
           },
           "author": {
             "type": "string",
-            "example": "F. Scott Fitzgerald"
+            //"example": "F. Scott Fitzgerald"
           },
           "year": {
             "type": "integer",
-            "example": 1925
+           // "example": 1925
           }
         }
       }
