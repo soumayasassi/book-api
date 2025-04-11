@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use('/api/books', bookRoutes);
+app.use('/books', bookRoutes);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get('/', (req, res) => {
   res.send('Bienvenue sur l\'API Book. Accédez à /api-docs pour la documentation.');
