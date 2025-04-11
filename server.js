@@ -14,6 +14,10 @@ app.use(express.json());
 
 
 app.use('/books', bookRoutes);
+app.get('/debug/books', async (req, res) => {
+  const books = await Book.find({});
+  res.json(books);
+});
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get('/', (req, res) => {
   res.send('Bienvenue sur l\'API Book. Accédez à /docs pour la documentation.');
@@ -24,6 +28,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
   family: 4 
 })
+
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
