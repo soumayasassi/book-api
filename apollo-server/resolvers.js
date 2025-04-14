@@ -1,25 +1,25 @@
 const axios = require("axios");
 
-const BASE_URL = "https://odyssey-lift-off-rest-api.herokuapp.com";
+const BASE_URL = "https://book-api-j51z.onrender.com";
 
 const resolvers = {
   Query: {
-    tracksForHome: async () => {
+    booksForHome: async () => {
       try {
-        const response = await axios.get(`${BASE_URL}/tracks`);
+        const response = await axios.get(`${BASE_URL}/books`);
         return response.data;
       } catch (error) {
         console.error("Error fetching tracks:", error);
-        throw new Error("Failed to fetch tracks");
+        throw new Error("Failed to fetch books");
       }
     },
-    track: async (_, { id }) => {
+    book: async (_, { id }) => {
       try {
-        const response = await axios.get(`${BASE_URL}/track/${id}`);
+        const response = await axios.get(`${BASE_URL}/books/${id}`);
         return response.data;
       } catch (error) {
-        console.error(`Error fetching track with ID ${id}:`, error);
-        throw new Error("Failed to fetch track");
+        console.error(`Error fetching book with ID ${id}:`, error);
+        throw new Error("Failed to fetch book");
       }
     },
   },
