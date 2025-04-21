@@ -16,7 +16,8 @@ module.exports = {
       return dataSources.bookAPI.updateBook(_id, input);
     },
     deleteBook: async (_, { _id }, { dataSources }) => {
-      return dataSources.bookAPI.deleteBook(_id);
+      await dataSources.bookAPI.deleteBook(_id);
+      return "Book with id"+_id+" deleted successfully.";
     },
   },
 };
